@@ -24,3 +24,9 @@ The CMS is at `/admin/`. On Netlify:
 Edit `content/site.json` for the hero/contact details. Add portfolio/testimonial entries through CMS. Change colors in `src/styles.css` under `:root`.
 
 The site uses Lucide icons only; no Instagram icon import is used, avoiding the common `Instagram is not exported` build error.
+
+
+## Social media handles
+
+Instagram, Behance and LinkedIn are now editable from **CMS → Website Settings → Social Media**.
+They also appear as clickable links in the site footer. Replace the placeholder URLs with your real profiles.
