@@ -1,0 +1,46 @@
+backend:
+  name: git-gateway
+  branch: main
+media_folder: "public/uploads"
+public_folder: "/uploads"
+site_url: "/"
+display_url: "/"
+collections:
+  - name: "site"
+    label: "Website Settings"
+    files:
+      - name: "site"
+        label: "Main Website"
+        file: "content/site.json"
+        format: "json"
+        fields:
+          - {label: "Brand Name", name: "brand", widget: "string"}
+          - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+          - {label: "Headline", name: "headline", widget: "text"}
+          - {label: "Intro", name: "intro", widget: "text"}
+          - {label: "CTA Button", name: "cta", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+  - name: "projects"
+    label: "Portfolio"
+    folder: "content/portfolio"
+    create: true
+    extension: "json"
+    format: "json"
+    slug: "{{slug}}"
+    fields:
+      - {label: "Project Title", name: "title", widget: "string"}
+      - {label: "Category", name: "category", widget: "select", options: ["Branding","Packaging","Social Media"]}
+      - {label: "Project Image", name: "image", widget: "image"}
+      - {label: "Project Number", name: "accent", widget: "string", required: false}
+      - {label: "Description", name: "description", widget: "text", required: false}
+  - name: "testimonials"
+    label: "Testimonials"
+    folder: "content/testimonials"
+    create: true
+    extension: "json"
+    format: "json"
+    slug: "{{slug}}"
+    fields:
+      - {label: "Quote", name: "quote", widget: "text"}
+      - {label: "Client Name", name: "name", widget: "string"}
+      - {label: "Role / Company", name: "role", widget: "string"}
